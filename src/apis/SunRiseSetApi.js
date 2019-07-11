@@ -15,10 +15,10 @@ const SunRiseSetApi = (date, locations) => {
       const response = await axios(
         `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=${formattedDate}`
       );
-      resultObj[name] = [
-        response.data.results.sunrise,
-        response.data.results.sunset
-      ];
+      resultObj[name] = {
+        sunrise: response.data.results.sunrise,
+        sunset: response.data.results.sunset
+      };
     };
 
     const fetchAllData = async () => {

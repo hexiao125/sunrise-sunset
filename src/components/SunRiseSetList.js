@@ -9,8 +9,8 @@ const SunRiseSetList = ({ data }) => {
           <SunRiseSetDetail
             key={key}
             city={key}
-            sunrise={value[0]}
-            sunset={value[1]}
+            sunrise={value.sunrise}
+            sunset={value.sunset}
           />
         );
       })}
